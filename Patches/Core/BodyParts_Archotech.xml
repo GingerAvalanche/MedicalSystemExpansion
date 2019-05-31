@@ -4,7 +4,7 @@
 	<!--============== Archotech Parent ================-->
 	<!-- Insert replacement for ImplantBase between its Parent and the Defs that will use it as a Parent -->
 	
-	<Operation Class="PatchOperationAttributeInsert">
+	<Operation Class="PatchOperationInsert">
 		<xpath>*/ThingDef[@Name = "BodyPartArchotechBase"]</xpath>
 		<value>
 			<ThingDef Name="MSE_BodyPartArchotech" ParentName="BodyPartArchotechBase" Abstract="True">
