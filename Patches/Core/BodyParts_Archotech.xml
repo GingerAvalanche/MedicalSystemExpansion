@@ -1,6 +1,40 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <Patch>
 
+	<!--============== Archotech Parent ================-->
+	<!-- Insert replacement for ImplantBase between its Parent and the Defs that will use it as a Parent -->
+	
+	<Operation Class="PatchOperationAttributeInsert">
+		<xpath>*/ThingDef[@Name = "BodyPartArchotechBase"]</xpath>
+		<value>
+			<ThingDef Name="MSE_BodyPartArchotech" ParentName="BodyPartArchotechBase" Abstract="True">
+				<recipeMaker>
+					<workSpeedStat>SmithingSpeed</workSpeedStat>
+					<workSkill>Crafting</workSkill>
+					<effectWorking>Smith</effectWorking>
+					<soundWorking>MSE_Assembling</soundWorking>
+					<recipeUsers>
+						<li>ArchotechProsthesesBench</li>
+					</recipeUsers>
+					<skillRequirements>
+						<Crafting>12</Crafting>
+					</skillRequirements>
+					<unfinishedThingDef>UnfinishedComponent</unfinishedThingDef>
+					<researchPrerequisite>MSE_ArchotechCrafting</researchPrerequisite>
+				</recipeMaker>
+				<techLevel>Archotech</techLevel>
+				<thingCategories>
+					<li>ArchotechProstheses</li>
+				</thingCategories>
+				<thingSetMakerTags>
+					<li>RewardSpecial</li>
+				</thingSetMakerTags>
+			</ThingDef>
+		</value>
+	</Operation>
+	
+	<!--============== Archotech Organs ================-->
+
 	<Operation Class="PatchOperationAttributeSet">
 		<xpath>*/ThingDef[defName = "ArchotechEye"]</xpath>
 		<attribute>ParentName</attribute>

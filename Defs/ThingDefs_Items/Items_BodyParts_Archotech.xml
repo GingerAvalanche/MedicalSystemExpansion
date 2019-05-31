@@ -1,6 +1,8 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <Defs>
 
+	<!-- Vanilla Archotech organs moved to Patches for mod compatibility -->
+
 	<!--============== Archotech Organs ================-->
 
 	<ThingDef ParentName="MSE_BodyPartArchotech">
